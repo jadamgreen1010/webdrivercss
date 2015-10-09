@@ -235,6 +235,9 @@ client
     }, function(err, res) {
         assert.ifError(err);
         assert.equal(res.steps, res.strictMatches)
+    }, function dummy(){
+        // The dummy function is a workaround to let webdrivercss
+        // control the callback instead of webdriverio.
     })
     .end();
 ```
